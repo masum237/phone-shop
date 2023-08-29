@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="https://www.onlineshopassistant.com/wp-content/uploads/2020/10/cropped-favicon.png" type="image/x-icon" />
+    <title>Phone Hunter Webpage</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar bg-[#0D6EFD0D] p-5 md:px-16 lg:px-20 py-5">
+          <div class="navbar-start">
+            <h1 class="text-xl md:text-2xl lg:text-2xl font-semibold"><a href="./index.html">Hot Gadgets</a></h1>
+          </div>
+          <div class="navbar-end">
+            <button class="normal-case text-white text-base md:text-lg lg:text-lg font-medium bg-[#0D6EFD] hover:bg-[#0D6EFD] px-5 py-2 md:px-10 md:py-3 lg:px-10 lg:py-3 rounded-lg">Sign Up</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- header text section -->
+      <section class="bg-[#0D6EFD0D] h-[500px] mx-auto">
+        <div class="text-center space-y-5 p-5">
+          <h1 class="text-[#100F0F] text-3xl md:text-4xl lg:text-4xl font-bold">Apple Iphone 13 Pro Max</h1>
+          <p class="text-[#706F6F] text-base md:text-lg lg:text-lg w-auto md:w-[600px] lg:w-[700px] mx-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+          <button class="normal-case text-white text-base md:text-lg lg:text-lg font-medium bg-[#0D6EFD] hover:bg-[#0D6EFD] px-10 py-3 rounded-lg">Buy Now</button>
+        </div>
+        <div class="flex justify-center items-center pt-10">
+          <div>
+            <img class="h-[200px] md:h-[350px] lg:h-[350px]" src="./image/pngwing 1.png" alt="" />
+          </div>
+          <div>
+            <img class="h-[300px] md:h-[500px] lg:h-[500px]" src="./image/pngwing 1.png" alt="" />
+          </div>
+          <div>
+            <img class="h-[200px] md:h-[350px] lg:h-[350px]" src="./image/pngwing 1.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- search section -->
+      <section>
+        <div class="flex justify-center items-center text-center gap-2 pt-36 md:pt-64 lg:pt-72">
+          <input id="search-box" type="text" placeholder="Search your phone" class="input input-bordered pr-16" />
+          <button onclick="searchHandler()" class="btn normal-case text-white bg-[#0D6EFD] hover:bg-[#0D6EFD]">Search</button>
+        </div>
+      </section>
+      <!-- card section -->
+      <section class="pt-10 justify-center items-center">
+        <!-- loading section -->
+        <div class="text-center m-10">
+          <span id="loading-animation" class="loading loading-dots loading-lg hidden"></span>
+        </div>
+        <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10"></div>
+
+        <!-- search show all -->
+        <div class="text-center p-5">
+          <button onclick="showAllHandler()" id="show-all" class="btn normal-case text-lg text-white bg-[#0D6EFD] hover:bg-[#0D6EFD] px-20 hidden">Show All Results</button>
+        </div>
+      </section>
+
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+          <form method="dialog" class="modal-box">
+            <div id="show-all-details-container"></div>
+            <div class="modal-action">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </div>
+          </form>
+        </dialog>
+      </section>
+    </main>
+    <!-- script section -->
+    <script src="./script/index.js"></script>
+  </body>
+</html>
